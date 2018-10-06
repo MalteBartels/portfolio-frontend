@@ -1,0 +1,72 @@
+#container {  
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: Courier;
+    text-align: center;
+  }
+
+  #profile {
+      animation: fadein .5s ease-in-out;
+      height: 8em;
+      width: 8em;
+      border-radius: 100%;
+  }
+  
+  p {
+    line-height: 2em;
+    font-size: 1.2em;
+    margin: 0;
+    width: 100vw;
+    max-width: 30em;
+    height: 5em;
+    margin: 1em 3em;
+    text-align: left;
+  }
+  
+  #links {
+    display: flex;
+  }
+  
+  #links a {
+    transition: .15s ease-in-out;
+    display: inline-block;
+    margin: 1em;
+        
+    transform: translateY(2.5em);
+    opacity: 0;
+    
+    vertical-align: center;
+    color: white;
+    font-weight: 600;
+  }
+
+  #links a img {
+    height: 4em;
+    width: auto;
+  }
+  
+  .animate-fadein {
+    animation: fadein .3s ease-out;
+  }
+  
+  #links a.animate-slidein {
+    transition: opacity 1s ease-in, transform 1s ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #links a:hover {
+    transition: .15s ease-in-out;
+    transform: translateY(5px);
+  }
+  
+  @keyframes fadein {
+    from { opacity: 0 } 
+    to { opacity: 1 }
+  }
+  
