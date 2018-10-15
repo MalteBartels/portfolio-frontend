@@ -1,0 +1,6 @@
+branches:
+  only:
+  - master
+language: node_js
+after_success:
+- echo "Hello world!"
