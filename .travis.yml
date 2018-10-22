@@ -1,6 +1,7 @@
 branches:
   only:
   - master
+  - feature/travis-integration
 language: node_js
-after_success:
+script:
 - echo "Hello world!"
