@@ -3,5 +3,14 @@ branches:
   - master
   - feature/travis-integration
 language: node_js
+before_install:
+  - openssl aes-256-cbc -K $encrypted_1de3bcba7fca_key -iv $encrypted_1de3bcba7fca_iv
+  -in deploy_key.enc -out ./deploy_key -d
+install:
+  - echo 'secure key' >> $HOME/.ssh/known_hosts
 script:
-- echo "Hello world!"
+  - eval "$(ssh-agent -s)"
+  - chmod 600 ./deploy_key
+  - echo -e "Host $SERVER_IP_ADRESS\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - ssh-add ./deploy_key
+  - sh deploy.sh
