@@ -1,7 +1,6 @@
 branches:
   only:
   - master
-  - feature/travis-integration
 language: node_js
 before_install:
   - openssl aes-256-cbc -K $encrypted_1de3bcba7fca_key -iv $encrypted_1de3bcba7fca_iv -in deploy_key.enc -out ./deploy_key -d
