@@ -10,6 +10,6 @@ install:
 script:
   - eval "$(ssh-agent -s)"
   - chmod 600 ./deploy_key
-  - echo -e "Host $SERVER_IP_ADRESS\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - echo -e "Host malte-bartels.de\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - ssh-add ./deploy_key
   - sh deploy.sh
