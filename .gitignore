@@ -19,3 +19,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# Prevent accidentially comitting the deploy key
+deploy_key
