@@ -1,5 +1,5 @@
 echo "Starting deploy"
-if [ "$TRAVIS_PULL_REQUEST" = "false" ]
+if [ "$TRAVIS_PULL_REQUEST" = "true" ]
     then     echo "Is a pull request, don't deploy!" & exit 0
 fi
 echo "Rename export folder"
