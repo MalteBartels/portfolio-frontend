@@ -20,4 +20,4 @@ deploy:
     - ssh-add ./deploy_key
     - sh deploy.sh
   on:
-    branch: mastern
+    branch: master
